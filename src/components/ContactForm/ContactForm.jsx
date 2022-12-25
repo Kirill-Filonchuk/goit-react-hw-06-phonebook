@@ -1,6 +1,5 @@
 /*eslint-env es6*/
 
-// import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getContacts } from 'redux/selectors';
 import { addContact } from 'redux/contactsSlice';
@@ -15,10 +14,10 @@ export const ContactForm = () => {
     const form = event.target;
     const name = form.elements[0].value;
     const number = form.elements[1].value
-    console.log(name, number);
-    console.log(contacts)
+    // console.log(name, number);
+    // console.log(contacts)
     const checkName = name.toLowerCase();
-    console.log(checkName)
+    // console.log(checkName)
       if (contacts.some(contactItem => contactItem.name.toLowerCase() === `${checkName}`)) {
           alert(`${name} is already in contacts`);
           return;

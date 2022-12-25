@@ -12,7 +12,7 @@ const contactsSlice = createSlice({
   reducers: {
     addContact: {
       reducer(state, action) {
-        console.log(action.payload, '<-- addContact in ContactSlice');
+        // console.log(action.payload, '<-- addContact in ContactSlice');
         state.push(action.payload);
       },
       prepare(name, number) {
@@ -32,7 +32,7 @@ const contactsSlice = createSlice({
       },
     },
     deleteContact(state, action) {
-      console.log(action.payload, '<-- Delete in ContactSlice');
+      // console.log(action.payload, '<-- Delete in ContactSlice');
       const index = state.findIndex(
         contactItem => contactItem.id === action.payload
       );
