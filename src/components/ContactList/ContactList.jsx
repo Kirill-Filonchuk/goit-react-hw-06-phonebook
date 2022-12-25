@@ -4,15 +4,12 @@ import { deleteContact } from 'redux/contactsSlice';
 import { getRenderContacts } from './helpersFunction';
 
 import s from './ContactList.module.css';
- 
+
 export const ContactList = () => {
     const contacts = useSelector(getContacts);
     const filterStateData = useSelector(getFilter);
     
-    console.log(filterStateData, '<--- ContactList FilterState');
-
     const contactsToRender = getRenderContacts(contacts, filterStateData);
-    console.log(contactsToRender, '<--- ContactList contactsToRender');
 
     const dispatch = useDispatch();
 
